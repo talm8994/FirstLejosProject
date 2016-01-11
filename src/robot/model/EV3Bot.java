@@ -1,5 +1,6 @@
 package robot.model;
 
+import lejos.hardware.ev3.LocalEV3;
 import lejos.hardware.lcd.LCD;
 import lejos.hardware.motor.Motor;
 import lejos.hardware.sensor.EV3UltrasonicSensor;
