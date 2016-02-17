@@ -28,17 +28,7 @@ public class EV3Bot
 	
 	public void driveRoom()
 	{
-		if(distanceSensor.getDistanceMode()[0] < 2)
-		{
-			
-		}
-		else
-		{
-			
-		}
-		displayMessage();
-		circles();
-		drive();
+		
 	}
 	
 	private void displayMessage()
