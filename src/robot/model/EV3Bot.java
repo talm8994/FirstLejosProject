@@ -19,6 +19,7 @@ public class EV3Bot
 	
 	private MovePilot botPilot;
 	private EV3UltrasonicSensor distanceSensor;
+	private float [] ultrasonicSamples;
 	
 	public void EV3Bot()
 	{
@@ -28,7 +29,17 @@ public class EV3Bot
 	
 	public void driveRoom()
 	{
-		
+		ultrasonicSamples = new float [distanceSensor.sampleSize()];
+		distanceSensor.fetchSample(ultrasonicSamples, 0);
+		if(ultrasonicSamples[0] < 2.5)
+		{
+			botPilot.travel(23.00);
+			botPilot.rotate(90);
+		}
+		else
+		{
+			botPilot.travel(254.00);
+		}
 	}
 	
 	private void displayMessage()
